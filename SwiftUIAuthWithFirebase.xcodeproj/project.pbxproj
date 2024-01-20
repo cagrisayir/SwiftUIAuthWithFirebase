@@ -13,6 +13,7 @@
 		06E223ED2B5BD47900CAB6B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06E223EC2B5BD47900CAB6B0 /* Preview Assets.xcassets */; };
 		06E223FC2B5BD53100CAB6B0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E223FB2B5BD53100CAB6B0 /* LoginView.swift */; };
 		06E223FE2B5BD6E000CAB6B0 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E223FD2B5BD6E000CAB6B0 /* InputView.swift */; };
+		06E224002B5BDB4200CAB6B0 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E223FF2B5BDB4200CAB6B0 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		06E223EC2B5BD47900CAB6B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		06E223FB2B5BD53100CAB6B0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		06E223FD2B5BD6E000CAB6B0 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		06E223FF2B5BDB4200CAB6B0 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				06E223FB2B5BD53100CAB6B0 /* LoginView.swift */,
+				06E223FF2B5BDB4200CAB6B0 /* RegisterView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06E223FC2B5BD53100CAB6B0 /* LoginView.swift in Sources */,
+				06E224002B5BDB4200CAB6B0 /* RegisterView.swift in Sources */,
 				06E223FE2B5BD6E000CAB6B0 /* InputView.swift in Sources */,
 				06E223E82B5BD47700CAB6B0 /* ContentView.swift in Sources */,
 				06E223E62B5BD47700CAB6B0 /* SwiftUIAuthWithFirebaseApp.swift in Sources */,
