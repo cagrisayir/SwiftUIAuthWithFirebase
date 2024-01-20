@@ -16,6 +16,7 @@
 		06E224002B5BDB4200CAB6B0 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E223FF2B5BDB4200CAB6B0 /* RegisterView.swift */; };
 		06E224022B5BDE2600CAB6B0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E224012B5BDE2600CAB6B0 /* ProfileView.swift */; };
 		06E224052B5BDF6D00CAB6B0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E224042B5BDF6D00CAB6B0 /* Extensions.swift */; };
+		06E224072B5BE20000CAB6B0 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E224062B5BE20000CAB6B0 /* SettingsRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		06E223FF2B5BDB4200CAB6B0 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		06E224012B5BDE2600CAB6B0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		06E224042B5BDF6D00CAB6B0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		06E224062B5BE20000CAB6B0 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				06E223FD2B5BD6E000CAB6B0 /* InputView.swift */,
+				06E224062B5BE20000CAB6B0 /* SettingsRowView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				06E224052B5BDF6D00CAB6B0 /* Extensions.swift in Sources */,
 				06E224002B5BDB4200CAB6B0 /* RegisterView.swift in Sources */,
 				06E223FE2B5BD6E000CAB6B0 /* InputView.swift in Sources */,
+				06E224072B5BE20000CAB6B0 /* SettingsRowView.swift in Sources */,
 				06E223E82B5BD47700CAB6B0 /* ContentView.swift in Sources */,
 				06E224022B5BDE2600CAB6B0 /* ProfileView.swift in Sources */,
 				06E223E62B5BD47700CAB6B0 /* SwiftUIAuthWithFirebaseApp.swift in Sources */,
