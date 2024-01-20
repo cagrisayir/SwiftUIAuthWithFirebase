@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyDrwfc0DThPAJ7ztUHlY_1fza_bXfG2idE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1015800382321</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.cagrisayir.SwiftUIAuthWithFirebase</string>
+	<key>PROJECT_ID</key>
+	<string>swiftuiauthtutorial-c3068</string>
+	<key>STORAGE_BUCKET</key>
+	<string>swiftuiauthtutorial-c3068.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1015800382321:ios:72ebe0714e789c491bacd0</string>
+</dict>
+</plist>
