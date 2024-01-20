@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ProfileView: View {
-    var user: User = User(id: "1", fullname: "Mich Jordan", email: "Mach@gmail.com")
+    var user: User = User.MOCK_USER
 
     var body: some View {
         List {
             Section {
                 HStack(alignment: .center) {
-                    Text(user.fullname.firstLetters())
+                    Text(user.fullname.firstLetters()) // you can also use user.initials
                         .font(.title)
                         .fontWeight(.semibold)
                         .foregroundStyle(.white)
@@ -64,12 +64,6 @@ struct ProfileView: View {
             }
         }
     }
-}
-
-struct User {
-    var id: String
-    var fullname: String
-    var email: String
 }
 
 #Preview {
