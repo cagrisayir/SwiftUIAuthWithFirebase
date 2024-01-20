@@ -14,6 +14,8 @@
 		06E223FC2B5BD53100CAB6B0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E223FB2B5BD53100CAB6B0 /* LoginView.swift */; };
 		06E223FE2B5BD6E000CAB6B0 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E223FD2B5BD6E000CAB6B0 /* InputView.swift */; };
 		06E224002B5BDB4200CAB6B0 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E223FF2B5BDB4200CAB6B0 /* RegisterView.swift */; };
+		06E224022B5BDE2600CAB6B0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E224012B5BDE2600CAB6B0 /* ProfileView.swift */; };
+		06E224052B5BDF6D00CAB6B0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E224042B5BDF6D00CAB6B0 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		06E223FB2B5BD53100CAB6B0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		06E223FD2B5BD6E000CAB6B0 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		06E223FF2B5BDB4200CAB6B0 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		06E224012B5BDE2600CAB6B0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		06E224042B5BDF6D00CAB6B0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 		06E223E42B5BD47700CAB6B0 /* SwiftUIAuthWithFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				06E224032B5BDF5800CAB6B0 /* Helpers */,
 				06E223F72B5BD4B300CAB6B0 /* App */,
 				06E223F62B5BD4B100CAB6B0 /* Components */,
 				06E223F52B5BD4AB00CAB6B0 /* Core */,
@@ -128,8 +133,17 @@
 		06E223FA2B5BD50500CAB6B0 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				06E224012B5BDE2600CAB6B0 /* ProfileView.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		06E224032B5BDF5800CAB6B0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				06E224042B5BDF6D00CAB6B0 /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,9 +217,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				06E223FC2B5BD53100CAB6B0 /* LoginView.swift in Sources */,
+				06E224052B5BDF6D00CAB6B0 /* Extensions.swift in Sources */,
 				06E224002B5BDB4200CAB6B0 /* RegisterView.swift in Sources */,
 				06E223FE2B5BD6E000CAB6B0 /* InputView.swift in Sources */,
 				06E223E82B5BD47700CAB6B0 /* ContentView.swift in Sources */,
+				06E224022B5BDE2600CAB6B0 /* ProfileView.swift in Sources */,
 				06E223E62B5BD47700CAB6B0 /* SwiftUIAuthWithFirebaseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
