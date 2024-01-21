@@ -10,8 +10,8 @@ import SwiftUI
 struct LoginView: View {
     @EnvironmentObject var viewModel: AuthViewModel
 
-    @State private var email = ""
-    @State private var password = ""
+    @State var email = ""
+    @State var password = ""
 
     var body: some View {
         NavigationStack {
@@ -47,6 +47,8 @@ struct LoginView: View {
                         .frame(width: 300, height: 48)
                 }
                 .background(Color(.systemBlue))
+                .disabled(!formIsValid)
+                .opacity(formIsValid ? 1.0 : 0.5)
                 .clipShape(.buttonBorder)
                 .padding(.top, 24)
 

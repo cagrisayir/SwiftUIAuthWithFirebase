@@ -9,6 +9,10 @@ import Firebase
 import FirebaseFirestoreSwift
 import Foundation
 
+protocol AuthFormProtocol {
+    var formIsValid: Bool { get }
+}
+
 @MainActor
 class AuthViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User? // Firebase Auth user
@@ -24,7 +28,7 @@ class AuthViewModel: ObservableObject {
 
     func login(withEmail email: String, password: String) async throws {
         do {
-            var response = try await Auth.auth().signIn(withEmail: email, password: password)
+            let response = try await Auth.auth().signIn(withEmail: email, password: password)
             userSession = response.user
 
             await fetchUser()
@@ -57,11 +61,23 @@ class AuthViewModel: ObservableObject {
         }
     }
 
-    func deleteAccount() {}
+    func deleteAccount() async {
+        if let uid = userSession?.uid {
+            Firestore.firestore().collection("user").document(uid)
+            userSession = nil
+            currentUser = nil
+        }
+    }
 
     func fetchUser() async {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         guard let snapshot = try? await Firestore.firestore().collection("users").document(uid).getDocument() else { return }
         currentUser = try? snapshot.data(as: User.self)
+    }
+}
+
+extension LoginView: AuthFormProtocol {
+    var formIsValid: Bool {
+        return !email.isEmpty && email.contains("@") && !password.isEmpty && password.count > 5
     }
 }
