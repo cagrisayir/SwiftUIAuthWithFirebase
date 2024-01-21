@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
     var user: User = User.MOCK_USER
 
     var body: some View {
@@ -49,10 +50,9 @@ struct ProfileView: View {
 
             Section("Account") {
                 Button(action: {
-                    print("Sign Out")
+                    try? viewModel.signOut()
                 }, label: {
                     SettingsRowView(imageName: "arrow.left.circle.fill", title: "Sign Out", tintColor: Color(.orange))
-
                 })
 
                 Button(action: {

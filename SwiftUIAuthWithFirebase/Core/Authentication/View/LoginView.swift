@@ -14,55 +14,53 @@ struct LoginView: View {
     @State private var password = ""
 
     var body: some View {
-        GeometryReader { geo in
-            NavigationStack {
-                VStack {
-                    // image
-                    Image("splash-screen-logo")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 200, height: 220)
-                        .padding(.vertical, 32)
+        NavigationStack {
+            VStack {
+                // image
+                Image("splash-screen-logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200, height: 220)
+                    .padding(.vertical, 32)
 
-                    // form fields
-                    VStack(spacing: 24) {
-                        InputView(text: $email, title: "Email Address", placeholder: "name@example.com")
+                // form fields
+                VStack(spacing: 24) {
+                    InputView(text: $email, title: "Email Address", placeholder: "name@example.com")
 
-                        InputView(text: $password, title: "Password", placeholder: "Enter your password", isSecureField: true)
+                    InputView(text: $password, title: "Password", placeholder: "Enter your password", isSecureField: true)
+                }
+                .textInputAutocapitalization(.never)
+                .padding(.horizontal)
+                .padding(.top, 12)
+
+                // sign in button
+                Button {
+                    Task {
+                        try await viewModel.login(withEmail: email, password: password)
                     }
-                    .textInputAutocapitalization(.never)
-                    .padding(.horizontal)
-                    .padding(.top, 12)
+                } label: {
+                    HStack {
+                        Text("Sign In")
+                            .fontWeight(.semibold)
+                        Image(systemName: "arrow.right")
+                    }.foregroundStyle(.white)
+                        .frame(width: 300, height: 48)
+                }
+                .background(Color(.systemBlue))
+                .clipShape(.buttonBorder)
+                .padding(.top, 24)
 
-                    // sign in button
-                    Button {
-                        Task {
-                            try await viewModel.login(withEmail: email, password: password)
-                        }
-                    } label: {
-                        HStack {
-                            Text("Sign In")
-                                .fontWeight(.semibold)
-                            Image(systemName: "arrow.right")
-                        }.foregroundStyle(.white)
-                            .frame(width: geo.size.width - 32, height: 48)
-                    }
-                    .background(Color(.systemBlue))
-                    .clipShape(.buttonBorder)
-                    .padding(.top, 24)
-
-                    Spacer()
-                    // sign up button
-                    NavigationLink {
-                        RegisterView()
-                            .navigationBarBackButtonHidden()
-                    } label: {
-                        HStack(spacing: 3) {
-                            Text("Don't have an account?")
-                            Text("Sign Up")
-                                .fontWeight(.bold)
-                        }.font(.system(size: 14))
-                    }
+                Spacer()
+                // sign up button
+                NavigationLink {
+                    RegisterView()
+                        .navigationBarBackButtonHidden()
+                } label: {
+                    HStack(spacing: 3) {
+                        Text("Don't have an account?")
+                        Text("Sign Up")
+                            .fontWeight(.bold)
+                    }.font(.system(size: 14))
                 }
             }
         }
