@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RegisterView: View {
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject var viewModel: AuthViewModel
 
     @State private var email = ""
     @State private var fullname = ""
@@ -38,7 +39,9 @@ struct RegisterView: View {
 
                 // sign up button
                 Button {
-                    print("Log user up")
+                    Task {
+                        try await viewModel.createUser(withEmail: email, password: password, fullname: fullname)
+                    }
                 } label: {
                     HStack {
                         Text("Sign Up")
