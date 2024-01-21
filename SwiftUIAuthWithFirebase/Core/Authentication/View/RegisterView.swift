@@ -11,10 +11,10 @@ struct RegisterView: View {
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var viewModel: AuthViewModel
 
-    @State private var email = ""
-    @State private var fullname = ""
-    @State private var password = ""
-    @State private var confirmPassword = ""
+    @State var email = ""
+    @State var fullname = ""
+    @State var password = ""
+    @State var confirmPassword = ""
 
     var body: some View {
         VStack {
@@ -51,6 +51,8 @@ struct RegisterView: View {
                     .frame(width: 300, height: 48)
             }
             .background(Color(.systemBlue))
+            .disabled(!formIsValid)
+            .opacity(formIsValid ? 1.0 : 0.5)
             .clipShape(.buttonBorder)
             .padding(.top, 24)
 

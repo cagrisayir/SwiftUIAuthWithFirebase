@@ -76,8 +76,21 @@ class AuthViewModel: ObservableObject {
     }
 }
 
+// MARK: Validation
+
 extension LoginView: AuthFormProtocol {
     var formIsValid: Bool {
         return !email.isEmpty && email.contains("@") && !password.isEmpty && password.count > 5
+    }
+}
+
+extension RegisterView: AuthFormProtocol {
+    var formIsValid: Bool {
+        return !email.isEmpty
+            && email.contains("@")
+            && !password.isEmpty
+            && password.count > 5
+            && password == confirmPassword
+            && !fullname.isEmpty
     }
 }
